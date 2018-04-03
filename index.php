@@ -79,13 +79,13 @@
                       <li><a href="index.html" >Home</a></li>
                       <li><a href="#">About Us</a></li>
                       <li><a href="#">Contact Us</a></li>
-                        <li><a class="waves-effect waves-light btn" a href="login.html">Sign In</a></li>
+                        <li><a class="waves-effect waves-light btn" a href="login">Sign In</a></li>
                   </ul>
                       <ul class="side-nav"  id="mobile-demo">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Contact Us</a></li>
-                        <li><a class="waves-effect waves-light btn" a href="login.html">Sign In</a></li>
+                        <li><a class="waves-effect waves-light btn" a href="login">Sign In</a></li>
                     </ul>
 							    </div>
 							  </nav>
@@ -224,7 +224,7 @@ Polytechnic University of the Philippines, Biñan or PUP Biñan is a PUP campus 
           <div class="footer-copyright">
             <div class="container">
             © 2018 Copyright Text
-            <a class="white-text text-lighten-4 right" href="#!">Developed By : Josua Berganio & Daniel Rivera</a>
+            <span class="white-text text-lighten-4 right" href="#!">Developed By : Josua Berganio, Davidson Consul &amp; Daniel Rivera</span>
             </div>
           </div>
         </footer>
