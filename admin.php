@@ -148,7 +148,7 @@ a#button_nav {
    
       </div>
       <div class="col s12 m6">
-         <a class="waves-effect waves-light btn" a href="#">Student Management</a>
+         <a class="waves-effect waves-light btn" a href="admin-studentmanagement">Student Management</a>
          
       </div>
            </div>
@@ -163,7 +163,7 @@ a#button_nav {
    
       </div>
       <div class="col s12 m6">
-        <a class="waves-effect waves-light btn" a href="#">Document Management</a>
+        <a class="waves-effect waves-light btn" a href="admin-managementdocuments">Document Management</a>
            </div>
 
           

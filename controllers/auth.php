@@ -3,7 +3,7 @@
 	header('Content-type: application/json');
 	$username = $_POST["username"];
 	$password = $_POST["password"];
-	$con = new mysqli("localhost", "root", "", "doc_request");
+	$con = new mysqli("192.168.1.18", "root", "", "doc_request");
 	$sql = "SELECT * FROM `users` WHERE `username` = '$username' AND `password` = '$password'";
 	$result = $con->query($sql);
 	$data;

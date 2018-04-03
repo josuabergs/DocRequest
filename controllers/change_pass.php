@@ -7,7 +7,7 @@
 	if($current_pass != $_SESSION["password"]) {
 		echo 0; //unsuccessful
 	} else {
-		$con = new mysqli("localhost", "root", "", "doc_request");
+		$con = new mysqli("192.168.1.18", "root", "", "doc_request");
 		$sql = "UPDATE `users` SET `password` = '$new_pass_retype' WHERE `id` = '$id'";
 		$con->query($sql);
 		$_SESSION["password"] = $new_pass_retype;
