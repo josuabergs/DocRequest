@@ -1,7 +1,14 @@
 <?php
-	// session_start();
-	// echo $_SESSION["name"];
-	// echo $_SESSION["number"];
+	session_start();
+	if(!isset($_SESSION["id"])) {
+		if($_SESSION["privilege"] == 1) {
+			header("Location: admin");
+		} else if($_SESSION["privilege"] == 2) {
+			header("Location: student");
+		} else {
+			header("Location: index");
+		}
+	}
 ?>
 
 <!DOCTYPE html>
@@ -81,13 +88,13 @@ a#button_nav {
                       <li><a href="index.php" >Home</a></li>
                       <li><a href="#">About Us</a></li>
                       <li><a href="#">Contact Us</a></li>
-                        <li><a class="waves-effect waves-light btn " id="button_nav" a href="login">Sign Out</a></li>
+                        <li><a class="waves-effect waves-light btn " id="button_nav" href="logout">Sign Out</a></li>
                   </ul>
                       <ul class="side-nav"  id="mobile-demo">
                         <li><a href="index.php">Home</a></li>
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Contact Us</a></li>
-                        <li><a class="waves-effect waves-light btn " id="button_nav" a href="login">Sign Out</a></li>
+                        <li><a class="waves-effect waves-light btn " id="button_nav" href="logout">Sign Out</a></li>
                     </ul>
 							    </div>
 							  </nav>

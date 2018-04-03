@@ -1,3 +1,16 @@
+<?php
+  session_start();
+  if(!isset($_SESSION["id"])) {
+    if($_SESSION["privilege"] == 1) {
+      header("Location: admin");
+    } else if($_SESSION["privilege"] == 2) {
+      header("Location: student");
+    } else {
+      header("Location: index");
+    }
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,13 +84,13 @@ div#asd{
                       <li><a href="index.php" >Home</a></li>
                       <li><a href="#">About Us</a></li>
                       <li><a href="#">Contact Us</a></li>
-                        <li><a class="waves-effect waves-light btn " id="button_nav" a href="login">Sign Out</a></li>
+                        <li><a class="waves-effect waves-light btn " id="button_nav" href="logout">Sign Out</a></li>
                   </ul>
                       <ul class="side-nav"  id="mobile-demo">
                         <li><a href="index.php">Home</a></li>
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Contact Us</a></li>
-                        <li><a class="waves-effect waves-light btn " id="button_nav" a href="login">Sign Out</a></li>
+                        <li><a class="waves-effect waves-light btn " id="button_nav" href="logout">Sign Out</a></li>
                     </ul>
                   </div>
                 </nav>
@@ -86,8 +99,6 @@ div#asd{
   <div class="section ">
       </div>
 
-
-
 <div class="container" id="asd">
     <div class="container">
        <h5 class="ew">Welcome :</h5>
@@ -95,17 +106,18 @@ div#asd{
       <div class="container">
         <div class="row">
           <div class="col s12 m12">
-       
               <form id="login-form">
                 <div class="input-field">
-             
-                  <input id="username" type="text" autocomplete="off">
-                  <label for="username">Change Password</label>
+                  <input id="current_pass" type="password" autocomplete="off">
+                  <label for="current_pass">Current Password</label>
                 </div>
                 <div class="input-field">
-               
-                  <input id="password" type="password" autocomplete="off">
-                  <label for="password">Retype Password</label>
+                  <input id="new_pass" type="password" autocomplete="off">
+                  <label for="new_pass">New Password</label>
+                </div>
+                <div class="input-field">
+                  <input id="new_pass_retype" type="password" autocomplete="off">
+                  <label for="new_pass_retype">Retype New Password</label>
                 </div>
                 <div class="center-align">
                   <button id="login-btn" class="hoverable waves-effect waves-light btn right" type="submit">
@@ -139,15 +151,33 @@ div#asd{
      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
   <script type="text/javascript">
-      $( document ).ready(function(){
-
+      $(document).ready(function(){
          $(".button-collapse").sideNav();
+
+         $('#login-form').submit(function(e) {
+            e.preventDefault();
+            if($('#new_pass').val() != $('#new_pass_retype').val()) {
+              alert('New password is not match');
+            } else {
+              $.ajax({
+                url: 'controllers/change_pass.php',
+                type: 'POST',
+                data: {
+                  current_pass: $('#current_pass').val(),
+                  new_pass_retype: $('#new_pass_retype').val()
+                },
+                success: function(response) {
+                  if(response == 1) {
+                    alert('Password changed successfully');
+                    window.location = "admin-usermanagement";
+                  } else {
+                    alert('Current password invalid');
+                  }
+                }
+             });
+            }
+         });
       })
-
-      
-
      </script>
     </body>
   </html>
-  
-

@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,13 +83,19 @@
                       <li><a href="index.php" >Home</a></li>
                       <li><a href="#">About Us</a></li>
                       <li><a href="#">Contact Us</a></li>
-                        <li><a class="waves-effect waves-light btn" a href="login">Sign In</a></li>
+                        <?php
+                          if(isset($_SESSION["id"])) { ?>
+                            <li><a class="waves-effect waves-light btn" href="logout">Sign out</a></li>
+                          <?php } else { ?>
+                            <li><a class="waves-effect waves-light btn" href="login">Sign In</a></li>
+                          <?php }
+                        ?>
                   </ul>
                       <ul class="side-nav"  id="mobile-demo">
                         <li><a href="index.php">Home</a></li>
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Contact Us</a></li>
-                        <li><a class="waves-effect waves-light btn" a href="login">Sign In</a></li>
+                        <li><a class="waves-effect waves-light btn" href="login">Sign In</a></li>
                     </ul>
 							    </div>
 							  </nav>
