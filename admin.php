@@ -1,3 +1,9 @@
+<?php
+	// session_start();
+	// echo $_SESSION["name"];
+	// echo $_SESSION["number"];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -184,5 +190,3 @@ a#button_nav {
      </script>
     </body>
   </html>
-  
-

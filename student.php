@@ -1,4 +1,8 @@
-<!--?php echo "student"; ?-->
+<?php
+	// session_start();
+	//echo $_SESSION["name"];
+	//echo $_SESSION["number"];
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -172,5 +176,3 @@ a.waves-effect.waves-light.btn {
      </script>
     </body>
   </html>
-  
-
