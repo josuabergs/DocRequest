@@ -127,19 +127,22 @@
 				$.ajax({
 					url: 'controllers/auth.php',
 					type: 'POST',
+					dataType: 'json',
 					data: {
 						username: $('#username').val(),
 						password: $('#password').val()
 					},
 					success: function(response) {
-						if(response == 1) {
-							alert(response);
-							window.location = "admin";
-						} else {
-							alert(response);
-							window.location = "student";
+						if(response.status == 1) {
+							if(response.privilege == 1) {
+								window.location = "admin";
+							} else {
+								window.location = "student";
+							}
+						} else{
+							alert("Error logging in");
 						}
-					} 
+					}
 				});
 			});
 		});
