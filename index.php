@@ -76,13 +76,13 @@
      					 <a href="#!" class="brand-logo">  <img class="responsive-img logo-img"  src="img/puplogo.png">
      					 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
      							 <ul class="right hide-on-med-and-down">
-                      <li><a href="index.html" >Home</a></li>
+                      <li><a href="index.php" >Home</a></li>
                       <li><a href="#">About Us</a></li>
                       <li><a href="#">Contact Us</a></li>
                         <li><a class="waves-effect waves-light btn" a href="login">Sign In</a></li>
                   </ul>
                       <ul class="side-nav"  id="mobile-demo">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Contact Us</a></li>
                         <li><a class="waves-effect waves-light btn" a href="login">Sign In</a></li>
