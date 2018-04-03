@@ -1,4 +1,13 @@
-<!-- developed by Daniel Rivera && Josua Berganio -->
+<?php  
+	session_start();
+	if(isset($_SESSION["id"])) {
+		if($_SESSION["privilege"] == 1) {
+			header("Location: admin");
+		} else if($_SESSION["privilege"] == 2) {
+			header("Location: student");
+		}
+	}
+?>
 
 <!DOCTYPE html>
 <html>
