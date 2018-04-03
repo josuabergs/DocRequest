@@ -1,9 +1,3 @@
-<?php
-	// session_start();
-	// echo $_SESSION["name"];
-	// echo $_SESSION["number"];
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,32 +46,28 @@ nav .button-collapse i {
     background-color: rgb(126, 14, 9);
 }
 
+div#asd{
 
+  height: 593px;
+}
 
 .col.s12.m12{
   margin-top: 100px;
 }
 
 .page-footer {
-    padding-top: 29px;
-    }
+    padding-top: 45px;
+  }
 
-a.waves-effect.waves-light.btn {
-    width: 300px;
-}
-
-a#button_nav {
-    width: 150px;
-}
     </style>
 
     <body>
-    <nav>
-   			 <div class="nav-wrapper white">
-    				<div class="container">
-     					 <a href="#!" class="brand-logo">  <img class="responsive-img logo-img"  src="img/puplogo.png">
-     					 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-     							 <ul class="right hide-on-med-and-down">
+     <nav>
+         <div class="nav-wrapper white">
+            <div class="container">
+               <a href="#!" class="brand-logo">  <img class="responsive-img logo-img"  src="img/puplogo.png">
+               <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                   <ul class="right hide-on-med-and-down">
                       <li><a href="index.php" >Home</a></li>
                       <li><a href="#">About Us</a></li>
                       <li><a href="#">Contact Us</a></li>
@@ -89,8 +79,8 @@ a#button_nav {
                         <li><a href="#">Contact Us</a></li>
                         <li><a class="waves-effect waves-light btn " id="button_nav" a href="login">Sign Out</a></li>
                     </ul>
-							    </div>
-							  </nav>
+                  </div>
+                </nav>
 
       
   <div class="section ">
@@ -101,82 +91,46 @@ a#button_nav {
 <div class="container" id="asd">
     <div class="container">
        <h5 class="ew">Welcome :</h5>
-          <h4 class="center-align">Admin Page</h4>
+          <h4 class="center-align">Admin Account</h4>
       <div class="container">
-     
-
-              <div class="col s12 m6">
-  
-        <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus facere sunt ut at, pariatur aperiam autem. Tempora mollitia, asperiores vitae eum unde impedit, expedita quam obcaecati deserunt dolor vero sit!</p>
-   
-      </div>
-      <div class="col s12 m6">
-     <a class="waves-effect waves-light btn" a href="#">Document Management</a>
-          
-      </div>
-           </div>
-
-             <div class="container">
-     
-
-              <div class="col s12 m6">
-  
-        <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus facere sunt ut at, pariatur aperiam autem. Tempora mollitia, asperiores vitae eum unde impedit, expedita quam obcaecati deserunt dolor vero sit!</p>
-   
-      </div>
-      <div class="col s12 m6">
-      <a class="waves-effect waves-light btn" a href="admin-usermanagement">User Management</a>
-         
-      </div>
-           </div>
-
-
-  
-             <div class="container">
-     
-
-              <div class="col s12 m6">
-  
-        <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus facere sunt ut at, pariatur aperiam autem. Tempora mollitia, asperiores vitae eum unde impedit, expedita quam obcaecati deserunt dolor vero sit!</p>
-   
-      </div>
-      <div class="col s12 m6">
-         <a class="waves-effect waves-light btn" a href="#">Student Management</a>
-         
-      </div>
-           </div>
-
-
-             <div class="container">
-     
-
-              <div class="col s12 m6">
-  
-        <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus facere sunt ut at, pariatur aperiam autem. Tempora mollitia, asperiores vitae eum unde impedit, expedita quam obcaecati deserunt dolor vero sit!</p>
-   
-      </div>
-      <div class="col s12 m6">
-        <a class="waves-effect waves-light btn" a href="#">Document Management</a>
-           </div>
-
-          
+        <div class="row">
+          <div class="col s12 m12">
+       
+              <form id="login-form">
+                <div class="input-field">
+             
+                  <input id="username" type="text" autocomplete="off">
+                  <label for="username">Change Password</label>
+                </div>
+                <div class="input-field">
+               
+                  <input id="password" type="password" autocomplete="off">
+                  <label for="password">Retype Password</label>
+                </div>
+                <div class="center-align">
+                  <button id="login-btn" class="hoverable waves-effect waves-light btn right" type="submit">
+                    save
+                  </button>
+                </div>
+              </form>
+            </div>
+            
           </div>
         </div>
-    
+      </div>
+    </div>
  
          </div>
 
 
              <footer class="page-footer">
-        
-          <div class="footer-copyright">
+       <div class="footer-copyright">
             <div class="container">
             © 2018 Copyright Text
-            <a class="white-text text-lighten-4 right" href="#!">Developed By : Josua Berganio & Daniel Rivera</a>
+            <span class="white-text text-lighten-4 right" href="#!">Developed By : Josua Berganio, Davidson Consul &amp; Daniel Rivera</span>
             </div>
           </div>
         </footer>
-            
 
 
       <!--Import jQuery before materialize.js-->
@@ -184,14 +138,16 @@ a#button_nav {
           </script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
-
-        <script type="text/javascript">
+  <script type="text/javascript">
       $( document ).ready(function(){
 
          $(".button-collapse").sideNav();
       })
 
+      
 
      </script>
     </body>
   </html>
+  
+
